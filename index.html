@@ -1,0 +1,1467 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Uday Hiremath - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#3e3893",
+              secondary: "#8039d7",
+              accent1: "#2ebc84",
+              accent2: "#daa738",
+              accent3: "#93a0ae",
+              bgLight: "#f2f6f9",
+              bgDark: "#c4d6d9",
+            },
+            borderRadius: {
+              none: "0px",
+              sm: "4px",
+              DEFAULT: "8px",
+              md: "12px",
+              lg: "16px",
+              xl: "20px",
+              "2xl": "24px",
+              "3xl": "32px",
+              full: "9999px",
+              button: "8px",
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css"
+    />
+    <style>
+      :where([class^="ri-"])::before { content: "\f3c2"; }
+      body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f2f6f9;
+      color: #333;
+      }
+      .progress-bar {
+      height: 8px;
+      border-radius: 4px;
+      background-color: #e2e8f0;
+      overflow: hidden;
+      }
+      .progress-fill {
+      height: 100%;
+      border-radius: 4px;
+      }
+      .card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+      }
+      input:focus, textarea:focus {
+      outline: none;
+      border-color: #3e3893;
+      box-shadow: 0 0 0 3px rgba(62, 56, 147, 0.2);
+      }
+      .timeline-dot {
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background-color: #3e3893;
+      border: 3px solid #f2f6f9;
+      z-index: 10;
+      }
+      .timeline-line {
+      position: absolute;
+      top: 16px;
+      bottom: 0;
+      left: 7px;
+      width: 2px;
+      background-color: #e2e8f0;
+      z-index: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="bg-white shadow-md">
+      <div
+        class="container mx-auto px-4 py-6 flex flex-col md:flex-row items-center justify-between"
+      >
+        <div class="flex items-center mb-4 md:mb-0">
+          <h1 class="text-2xl font-bold text-primary">Uday Hiremath</h1>
+        </div>
+        <nav>
+          <ul class="flex space-x-6">
+            <li>
+              <a
+                href="#about"
+                class="text-gray-700 hover:text-primary transition"
+                >About</a
+              >
+            </li>
+            <li>
+              <a
+                href="#skills"
+                class="text-gray-700 hover:text-primary transition"
+                >Skills</a
+              >
+            </li>
+            <li>
+              <a
+                href="#projects"
+                class="text-gray-700 hover:text-primary transition"
+                >Projects</a
+              >
+            </li>
+            <li>
+              <a
+                href="#experience"
+                class="text-gray-700 hover:text-primary transition"
+                >Experience</a
+              >
+            </li>
+            <li>
+              <a
+                href="#contact"
+                class="text-gray-700 hover:text-primary transition"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <section
+      id="hero"
+      class="py-16 md:py-24 bg-gradient-to-br from-primary/10 to-secondary/10"
+    >
+      <div
+        class="container mx-auto px-4 flex flex-col md:flex-row items-center"
+      >
+        <div class="w-full md:w-1/2 mb-8 md:mb-0">
+          <h1 class="text-4xl md:text-5xl font-bold mb-4 text-gray-800">
+            AI Developer & <span class="text-primary">Problem Solver</span>
+          </h1>
+          <p class="text-lg mb-6 text-gray-600">
+            Passionate about creating intelligent solutions that drive business
+            value and enhance user experiences.
+          </p>
+          <div class="flex flex-wrap gap-3 mb-8">
+            <span
+              class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-medium"
+              >3+ Years Experience</span
+            >
+            <span
+              class="bg-accent1/10 text-accent1 px-3 py-1 rounded-full text-sm font-medium"
+              >AI Agent Development</span
+            >
+            <span
+              class="bg-accent2/10 text-accent2 px-3 py-1 rounded-full text-sm font-medium"
+              >Full-Stack Developer</span
+            >
+          </div>
+          <div class="flex space-x-4">
+            <a
+              href="#contact"
+              class="bg-primary text-white px-6 py-3 rounded-button font-medium hover:bg-primary/90 transition whitespace-nowrap"
+              >Get in Touch</a
+            >
+            <a
+              href="#projects"
+              class="border border-primary text-primary px-6 py-3 rounded-button font-medium hover:bg-primary/5 transition whitespace-nowrap"
+              >View Projects</a
+            >
+          </div>
+        </div>
+        <div class="w-full md:w-1/2 flex justify-center">
+          <div
+            class="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-white shadow-xl"
+          >
+            <img
+              src="https://static.readdy.ai/image/06ea4ecb9ab4ee91bf1263de3439a230/5b6809130c9d690b16198a8b3efdf263.webp"
+              alt="Uday Hiremath"
+              class="w-full h-full object-cover object-top"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="about" class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">
+          About Me
+        </h2>
+        <div class="flex flex-col md:flex-row gap-8">
+          <div class="w-full md:w-2/3 bg-white rounded-lg shadow-md p-6">
+            <h3 class="text-xl font-semibold mb-4 text-primary">
+              From AI Agent Development to Full-Stack Solutions
+            </h3>
+            <p class="text-gray-700 mb-4">
+              I'm a passionate developer with expertise in AI agent development
+              and full-stack web applications. My journey in technology began
+              with a strong foundation in computer science fundamentals and has
+              evolved into creating innovative solutions that solve real-world
+              problems.
+            </p>
+            <p class="text-gray-700 mb-4">
+              With a keen interest in artificial intelligence and automation,
+              I've developed various tools and applications that help businesses
+              streamline their operations and enhance user experiences. My
+              approach combines technical expertise with a deep understanding of
+              client needs to deliver solutions that drive value.
+            </p>
+            <p class="text-gray-700">
+              I believe in continuous learning and staying updated with the
+              latest technologies and industry trends. This commitment to growth
+              has allowed me to adapt quickly to new challenges and deliver
+              exceptional results consistently.
+            </p>
+          </div>
+          <div class="w-full md:w-1/3">
+            <div class="bg-white rounded-lg shadow-md p-6 mb-6">
+              <h3
+                class="text-xl font-semibold mb-4 flex items-center text-primary"
+              >
+                <div
+                  class="w-8 h-8 flex items-center justify-center mr-2 bg-primary/10 rounded-full"
+                >
+                  <i class="ri-graduation-cap-line text-primary"></i>
+                </div>
+                Education
+              </h3>
+              <div class="mb-2">
+                <h4 class="font-medium">KLE Technological University, Hubli</h4>
+                <p class="text-gray-600 text-sm">B.Tech in Computer Science</p>
+              </div>
+              <div class="flex items-center text-sm text-gray-600">
+                <div class="w-6 h-6 flex items-center justify-center mr-1">
+                  <i class="ri-calendar-line"></i>
+                </div>
+                <span>2019 - 2023</span>
+              </div>
+            </div>
+            <div class="bg-white rounded-lg shadow-md p-6">
+              <h3
+                class="text-xl font-semibold mb-4 flex items-center text-primary"
+              >
+                <div
+                  class="w-8 h-8 flex items-center justify-center mr-2 bg-primary/10 rounded-full"
+                >
+                  <i class="ri-presentation-line text-primary"></i>
+                </div>
+                Presentation Skills
+              </h3>
+              <p class="text-gray-700">
+                Expert in creating professional presentations using Canva, with
+                a focus on modern design principles and effective visual
+                communication.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="skills" class="py-16 bg-bgLight">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">
+          Technical Skills
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- AI Agent Development -->
+          <div class="bg-white rounded-lg shadow-md p-6 card">
+            <div class="flex items-center mb-4">
+              <div
+                class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full mr-3"
+              >
+                <i class="ri-robot-line text-primary text-xl"></i>
+              </div>
+              <h3 class="text-xl font-semibold text-gray-800">
+                AI Agent Development
+              </h3>
+            </div>
+            <div class="space-y-4">
+              <div>
+                <div class="flex justify-between mb-1">
+                  <span class="text-sm font-medium text-gray-700"
+                    >LangChain</span
+                  >
+                  <span class="text-sm font-medium text-gray-700">92%</span>
+                </div>
+                <div class="progress-bar">
+                  <div
+                    class="progress-fill bg-primary"
+                    style="width: 92%"
+                  ></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between mb-1">
+                  <span class="text-sm font-medium text-gray-700"
+                    >LLM Integration</span
+                  >
+                  <span class="text-sm font-medium text-gray-700">88%</span>
+                </div>
+                <div class="progress-bar">
+                  <div
+                    class="progress-fill bg-primary"
+                    style="width: 88%"
+                  ></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between mb-1">
+                  <span class="text-sm font-medium text-gray-700"
+                    >Prompt Engineering</span
+                  >
+                  <span class="text-sm font-medium text-gray-700">95%</span>
+                </div>
+                <div class="progress-bar">
+                  <div
+                    class="progress-fill bg-primary"
+                    style="width: 95%"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Programming Languages -->
+          <div class="bg-white rounded-lg shadow-md p-6 card">
+            <div class="flex items-center mb-4">
+              <div
+                class="w-10 h-10 flex items-center justify-center bg-secondary/10 rounded-full mr-3"
+              >
+                <i class="ri-code-s-slash-line text-secondary text-xl"></i>
+              </div>
+              <h3 class="text-xl font-semibold text-gray-800">
+                Programming Languages
+              </h3>
+            </div>
+            <div class="space-y-4">
+              <div>
+                <div class="flex justify-between mb-1">
+                  <span class="text-sm font-medium text-gray-700">Python</span>
+                  <span class="text-sm font-medium text-gray-700">90%</span>
+                </div>
+                <div class="progress-bar">
+                  <div
+                    class="progress-fill bg-secondary"
+                    style="width: 90%"
+                  ></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between mb-1">
+                  <span class="text-sm font-medium text-gray-700"
+                    >JavaScript</span
+                  >
+                  <span class="text-sm font-medium text-gray-700">85%</span>
+                </div>
+                <div class="progress-bar">
+                  <div
+                    class="progress-fill bg-secondary"
+                    style="width: 85%"
+                  ></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between mb-1">
+                  <span class="text-sm font-medium text-gray-700">C/C++</span>
+                  <span class="text-sm font-medium text-gray-700">82%</span>
+                </div>
+                <div class="progress-bar">
+                  <div
+                    class="progress-fill bg-secondary"
+                    style="width: 82%"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Data Structures & Algorithms -->
+          <div class="bg-white rounded-lg shadow-md p-6 card">
+            <div class="flex items-center mb-4">
+              <div
+                class="w-10 h-10 flex items-center justify-center bg-accent1/10 rounded-full mr-3"
+              >
+                <i class="ri-database-2-line text-accent1 text-xl"></i>
+              </div>
+              <h3 class="text-xl font-semibold text-gray-800">DSA</h3>
+            </div>
+            <div class="space-y-4">
+              <div>
+                <div class="flex justify-between mb-1">
+                  <span class="text-sm font-medium text-gray-700"
+                    >Problem Solving</span
+                  >
+                  <span class="text-sm font-medium text-gray-700">88%</span>
+                </div>
+                <div class="progress-bar">
+                  <div
+                    class="progress-fill bg-accent1"
+                    style="width: 88%"
+                  ></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between mb-1">
+                  <span class="text-sm font-medium text-gray-700"
+                    >Algorithmic Thinking</span
+                  >
+                  <span class="text-sm font-medium text-gray-700">85%</span>
+                </div>
+                <div class="progress-bar">
+                  <div
+                    class="progress-fill bg-accent1"
+                    style="width: 85%"
+                  ></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between mb-1">
+                  <span class="text-sm font-medium text-gray-700"
+                    >Optimization</span
+                  >
+                  <span class="text-sm font-medium text-gray-700">80%</span>
+                </div>
+                <div class="progress-bar">
+                  <div
+                    class="progress-fill bg-accent1"
+                    style="width: 80%"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Web Development -->
+          <div class="bg-white rounded-lg shadow-md p-6 card">
+            <div class="flex items-center mb-4">
+              <div
+                class="w-10 h-10 flex items-center justify-center bg-accent2/10 rounded-full mr-3"
+              >
+                <i class="ri-code-box-line text-accent2 text-xl"></i>
+              </div>
+              <h3 class="text-xl font-semibold text-gray-800">
+                Web Development
+              </h3>
+            </div>
+            <div class="space-y-4">
+              <div>
+                <div class="flex justify-between mb-1">
+                  <span class="text-sm font-medium text-gray-700"
+                    >React.js</span
+                  >
+                  <span class="text-sm font-medium text-gray-700">87%</span>
+                </div>
+                <div class="progress-bar">
+                  <div
+                    class="progress-fill bg-accent2"
+                    style="width: 87%"
+                  ></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between mb-1">
+                  <span class="text-sm font-medium text-gray-700">Node.js</span>
+                  <span class="text-sm font-medium text-gray-700">85%</span>
+                </div>
+                <div class="progress-bar">
+                  <div
+                    class="progress-fill bg-accent2"
+                    style="width: 85%"
+                  ></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between mb-1">
+                  <span class="text-sm font-medium text-gray-700">Next.js</span>
+                  <span class="text-sm font-medium text-gray-700">80%</span>
+                </div>
+                <div class="progress-bar">
+                  <div
+                    class="progress-fill bg-accent2"
+                    style="width: 80%"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Automation -->
+          <div class="bg-white rounded-lg shadow-md p-6 card">
+            <div class="flex items-center mb-4">
+              <div
+                class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full mr-3"
+              >
+                <i class="ri-settings-line text-primary text-xl"></i>
+              </div>
+              <h3 class="text-xl font-semibold text-gray-800">Automation</h3>
+            </div>
+            <div class="space-y-4">
+              <div>
+                <div class="flex justify-between mb-1">
+                  <span class="text-sm font-medium text-gray-700"
+                    >Workflow Automation</span
+                  >
+                  <span class="text-sm font-medium text-gray-700">92%</span>
+                </div>
+                <div class="progress-bar">
+                  <div
+                    class="progress-fill bg-primary"
+                    style="width: 92%"
+                  ></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between mb-1">
+                  <span class="text-sm font-medium text-gray-700">CI/CD</span>
+                  <span class="text-sm font-medium text-gray-700">78%</span>
+                </div>
+                <div class="progress-bar">
+                  <div
+                    class="progress-fill bg-primary"
+                    style="width: 78%"
+                  ></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between mb-1">
+                  <span class="text-sm font-medium text-gray-700"
+                    >Testing Automation</span
+                  >
+                  <span class="text-sm font-medium text-gray-700">75%</span>
+                </div>
+                <div class="progress-bar">
+                  <div
+                    class="progress-fill bg-primary"
+                    style="width: 75%"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Client-Oriented Skills -->
+          <div class="bg-white rounded-lg shadow-md p-6 card">
+            <div class="flex items-center mb-4">
+              <div
+                class="w-10 h-10 flex items-center justify-center bg-secondary/10 rounded-full mr-3"
+              >
+                <i class="ri-user-voice-line text-secondary text-xl"></i>
+              </div>
+              <h3 class="text-xl font-semibold text-gray-800">
+                Client-Oriented Skills
+              </h3>
+            </div>
+            <div class="space-y-4">
+              <div>
+                <div class="flex justify-between mb-1">
+                  <span class="text-sm font-medium text-gray-700"
+                    >Communication</span
+                  >
+                  <span class="text-sm font-medium text-gray-700">95%</span>
+                </div>
+                <div class="progress-bar">
+                  <div
+                    class="progress-fill bg-secondary"
+                    style="width: 95%"
+                  ></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between mb-1">
+                  <span class="text-sm font-medium text-gray-700"
+                    >Problem Analysis</span
+                  >
+                  <span class="text-sm font-medium text-gray-700">90%</span>
+                </div>
+                <div class="progress-bar">
+                  <div
+                    class="progress-fill bg-secondary"
+                    style="width: 90%"
+                  ></div>
+                </div>
+              </div>
+              <div>
+                <div class="flex justify-between mb-1">
+                  <span class="text-sm font-medium text-gray-700"
+                    >Solution Design</span
+                  >
+                  <span class="text-sm font-medium text-gray-700">88%</span>
+                </div>
+                <div class="progress-bar">
+                  <div
+                    class="progress-fill bg-secondary"
+                    style="width: 88%"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="projects" class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">
+          Projects
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <!-- AI Assistant Project -->
+          <div class="bg-white rounded-lg shadow-md overflow-hidden card">
+            <div
+              class="h-48 bg-gradient-to-r from-primary to-secondary flex items-center justify-center"
+            >
+              <img
+                src="https://readdy.ai/api/search-image?query=AI%20chatbot%20interface%20with%20modern%20UI%20design%2C%20showing%20conversation%20flow%2C%20clean%20minimal%20design%20with%20blue%20and%20purple%20gradient%2C%20professional%20product%20visualization&width=600&height=300&seq=2&orientation=landscape"
+                alt="AI Assistant Project"
+                class="h-full w-full object-cover object-top"
+              />
+            </div>
+            <div class="p-6">
+              <div class="flex justify-between items-center mb-3">
+                <h3 class="text-xl font-semibold text-gray-800">
+                  AI Assistant
+                </h3>
+                <span
+                  class="bg-accent1/10 text-accent1 px-3 py-1 rounded-full text-xs font-medium"
+                  >Completed</span
+                >
+              </div>
+              <p class="text-gray-700 mb-4">
+                Developed an intelligent AI assistant capable of understanding
+                complex queries and providing contextually relevant responses.
+                The assistant integrates with various APIs to fetch real-time
+                data and assist users with their tasks.
+              </p>
+              <div class="mb-4">
+                <h4 class="font-medium text-gray-800 mb-2">Tech Stack</h4>
+                <div class="flex flex-wrap gap-2">
+                  <span
+                    class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-xs"
+                    >Python</span
+                  >
+                  <span
+                    class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-xs"
+                    >LangChain</span
+                  >
+                  <span
+                    class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-xs"
+                    >OpenAI API</span
+                  >
+                  <span
+                    class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-xs"
+                    >React</span
+                  >
+                  <span
+                    class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-xs"
+                    >Node.js</span
+                  >
+                </div>
+              </div>
+              <div class="flex justify-between items-center">
+                <div class="flex items-center text-sm text-gray-600">
+                  <div class="w-5 h-5 flex items-center justify-center mr-1">
+                    <i class="ri-calendar-line"></i>
+                  </div>
+                  <span>March 2023</span>
+                </div>
+                <a
+                  href="#"
+                  class="text-primary hover:text-primary/80 font-medium flex items-center"
+                >
+                  <span>View Details</span>
+                  <div class="w-5 h-5 flex items-center justify-center ml-1">
+                    <i class="ri-arrow-right-line"></i>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- Weather App Project -->
+          <div class="bg-white rounded-lg shadow-md overflow-hidden card">
+            <div
+              class="h-48 bg-gradient-to-r from-accent1 to-accent2 flex items-center justify-center"
+            >
+              <img
+                src="https://readdy.ai/api/search-image?query=modern%20weather%20application%20interface%20with%20beautiful%20weather%20icons%2C%20temperature%20displays%2C%20and%20forecast%20cards%2C%20clean%20and%20minimal%20design%20with%20blue%20sky%20gradient%20background&width=600&height=300&seq=6&orientation=landscape"
+                alt="Weather App"
+                class="h-full w-full object-cover object-top"
+              />
+            </div>
+            <div class="p-6">
+              <div class="flex justify-between items-center mb-3">
+                <h3 class="text-xl font-semibold text-gray-800">Weather App</h3>
+                <span
+                  class="bg-accent1/10 text-accent1 px-3 py-1 rounded-full text-xs font-medium"
+                  >Completed</span
+                >
+              </div>
+              <p class="text-gray-700 mb-4">
+                Built a responsive weather application that provides real-time
+                weather updates, forecasts, and location-based weather
+                information. Features include interactive maps, detailed weather
+                metrics, and severe weather alerts.
+              </p>
+              <div class="mb-4">
+                <h4 class="font-medium text-gray-800 mb-2">Tech Stack</h4>
+                <div class="flex flex-wrap gap-2">
+                  <span
+                    class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-xs"
+                    >React</span
+                  >
+                  <span
+                    class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-xs"
+                    >OpenWeather API</span
+                  >
+                  <span
+                    class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-xs"
+                    >Tailwind CSS</span
+                  >
+                  <span
+                    class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-xs"
+                    >Chart.js</span
+                  >
+                </div>
+              </div>
+              <div class="flex justify-between items-center">
+                <div class="flex items-center text-sm text-gray-600">
+                  <div class="w-5 h-5 flex items-center justify-center mr-1">
+                    <i class="ri-calendar-line"></i>
+                  </div>
+                  <span>April 2023</span>
+                </div>
+                <a
+                  href="#"
+                  class="text-primary hover:text-primary/80 font-medium flex items-center"
+                >
+                  <span>View Details</span>
+                  <div class="w-5 h-5 flex items-center justify-center ml-1">
+                    <i class="ri-arrow-right-line"></i>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- Chat App Project -->
+          <div class="bg-white rounded-lg shadow-md overflow-hidden card">
+            <div
+              class="h-48 bg-gradient-to-r from-secondary to-accent3 flex items-center justify-center"
+            >
+              <img
+                src="https://readdy.ai/api/search-image?query=modern%20chat%20application%20interface%20with%20message%20bubbles%2C%20AI%20integration%20panel%2C%20and%20sleek%20design%20elements%2C%20professional%20messaging%20platform%20with%20purple%20and%20blue%20accents&width=600&height=300&seq=7&orientation=landscape"
+                alt="Chat App"
+                class="h-full w-full object-cover object-top"
+              />
+            </div>
+            <div class="p-6">
+              <div class="flex justify-between items-center mb-3">
+                <h3 class="text-xl font-semibold text-gray-800">
+                  Chat App with LLM Integration
+                </h3>
+                <span
+                  class="bg-accent1/10 text-accent1 px-3 py-1 rounded-full text-xs font-medium"
+                  >Completed</span
+                >
+              </div>
+              <p class="text-gray-700 mb-4">
+                Developed a sophisticated chat application integrated with Large
+                Language Models and n8n workflow automation. Features include
+                real-time messaging, AI-powered responses, and automated
+                workflow triggers.
+              </p>
+              <div class="mb-4">
+                <h4 class="font-medium text-gray-800 mb-2">Tech Stack</h4>
+                <div class="flex flex-wrap gap-2">
+                  <span
+                    class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-xs"
+                    >Next.js</span
+                  >
+                  <span
+                    class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-xs"
+                    >n8n</span
+                  >
+                  <span
+                    class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-xs"
+                    >OpenAI API</span
+                  >
+                  <span
+                    class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-xs"
+                    >WebSocket</span
+                  >
+                  <span
+                    class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-xs"
+                    >MongoDB</span
+                  >
+                </div>
+              </div>
+              <div class="flex justify-between items-center">
+                <div class="flex items-center text-sm text-gray-600">
+                  <div class="w-5 h-5 flex items-center justify-center mr-1">
+                    <i class="ri-calendar-line"></i>
+                  </div>
+                  <span>May 2023</span>
+                </div>
+                <a
+                  href="#"
+                  class="text-primary hover:text-primary/80 font-medium flex items-center"
+                >
+                  <span>View Details</span>
+                  <div class="w-5 h-5 flex items-center justify-center ml-1">
+                    <i class="ri-arrow-right-line"></i>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- E-commerce Platform -->
+          <div class="bg-white rounded-lg shadow-md overflow-hidden card">
+            <div
+              class="h-48 bg-gradient-to-r from-accent2 to-primary flex items-center justify-center"
+            >
+              <img
+                src="https://readdy.ai/api/search-image?query=modern%20e-commerce%20website%20interface%20with%20product%20grid%2C%20shopping%20cart%2C%20and%20payment%20options%2C%20professional%20online%20store%20with%20gold%20and%20blue%20elements&width=600&height=300&seq=5&orientation=landscape"
+                alt="E-commerce Platform"
+                class="h-full w-full object-cover object-top"
+              />
+            </div>
+            <div class="p-6">
+              <div class="flex justify-between items-center mb-3">
+                <h3 class="text-xl font-semibold text-gray-800">
+                  E-commerce Platform
+                </h3>
+                <span
+                  class="bg-accent1/10 text-accent1 px-3 py-1 rounded-full text-xs font-medium"
+                  >Completed</span
+                >
+              </div>
+              <p class="text-gray-700 mb-4">
+                Developed a full-featured e-commerce platform with product
+                management, shopping cart, payment integration, and order
+                tracking. The platform includes an admin dashboard for inventory
+                and order management.
+              </p>
+              <div class="mb-4">
+                <h4 class="font-medium text-gray-800 mb-2">Tech Stack</h4>
+                <div class="flex flex-wrap gap-2">
+                  <span
+                    class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-xs"
+                    >React</span
+                  >
+                  <span
+                    class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-xs"
+                    >Node.js</span
+                  >
+                  <span
+                    class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-xs"
+                    >Express</span
+                  >
+                  <span
+                    class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-xs"
+                    >MongoDB</span
+                  >
+                  <span
+                    class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-xs"
+                    >Stripe API</span
+                  >
+                </div>
+              </div>
+              <div class="flex justify-between items-center">
+                <div class="flex items-center text-sm text-gray-600">
+                  <div class="w-5 h-5 flex items-center justify-center mr-1">
+                    <i class="ri-calendar-line"></i>
+                  </div>
+                  <span>November 2022</span>
+                </div>
+                <a
+                  href="#"
+                  class="text-primary hover:text-primary/80 font-medium flex items-center"
+                >
+                  <span>View Details</span>
+                  <div class="w-5 h-5 flex items-center justify-center ml-1">
+                    <i class="ri-arrow-right-line"></i>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="experience" class="py-16 bg-bgLight">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">
+          Professional Experience
+        </h2>
+        <div class="max-w-3xl mx-auto">
+          <!-- Timeline Item 1 -->
+          <div class="relative pl-8 pb-12">
+            <div class="timeline-dot absolute left-0 top-0"></div>
+            <div class="timeline-line"></div>
+            <div class="bg-white rounded-lg shadow-md p-6 card">
+              <div class="flex justify-between items-center mb-4">
+                <h3 class="text-xl font-semibold text-gray-800">
+                  Technical Mentor
+                </h3>
+                <span
+                  class="bg-primary/10 text-primary px-3 py-1 rounded-full text-xs font-medium"
+                  >Current</span
+                >
+              </div>
+              <div class="flex items-center mb-4 text-gray-600">
+                <div class="w-5 h-5 flex items-center justify-center mr-2">
+                  <i class="ri-building-line"></i>
+                </div>
+                <span>TechLearn Academy</span>
+                <div class="w-5 h-5 flex items-center justify-center mx-2">
+                  <i class="ri-calendar-line"></i>
+                </div>
+                <span>January 2023 - Present</span>
+              </div>
+              <p class="text-gray-700 mb-4">
+                Providing technical guidance and mentorship to junior developers
+                for 2 years, focusing on AI development, web technologies, and
+                software engineering best practices.
+              </p>
+              <div class="space-y-2">
+                <div class="flex items-start">
+                  <div
+                    class="w-5 h-5 flex items-center justify-center mt-0.5 mr-2 text-accent1"
+                  >
+                    <i class="ri-check-line"></i>
+                  </div>
+                  <p class="text-gray-700">
+                    Successfully mentored and guided over 30 junior developers
+                    in their technical growth
+                  </p>
+                </div>
+                <div class="flex items-start">
+                  <div
+                    class="w-5 h-5 flex items-center justify-center mt-0.5 mr-2 text-accent1"
+                  >
+                    <i class="ri-check-line"></i>
+                  </div>
+                  <p class="text-gray-700">
+                    Developed and implemented effective training programs and
+                    coding workshops
+                  </p>
+                </div>
+                <div class="flex items-start">
+                  <div
+                    class="w-5 h-5 flex items-center justify-center mt-0.5 mr-2 text-accent1"
+                  >
+                    <i class="ri-check-line"></i>
+                  </div>
+                  <p class="text-gray-700">
+                    Created comprehensive documentation and learning resources
+                    for team development
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Timeline Item 2 -->
+          <div class="relative pl-8 pb-12">
+            <div class="timeline-dot absolute left-0 top-0"></div>
+            <div class="timeline-line"></div>
+            <div class="bg-white rounded-lg shadow-md p-6 card">
+              <div class="flex justify-between items-center mb-4">
+                <h3 class="text-xl font-semibold text-gray-800">
+                  Software Developer Intern
+                </h3>
+                <span
+                  class="bg-accent3/10 text-accent3 px-3 py-1 rounded-full text-xs font-medium"
+                  >Completed</span
+                >
+              </div>
+              <div class="flex items-center mb-4 text-gray-600">
+                <div class="w-5 h-5 flex items-center justify-center mr-2">
+                  <i class="ri-building-line"></i>
+                </div>
+                <span>InnoTech Solutions</span>
+                <div class="w-5 h-5 flex items-center justify-center mx-2">
+                  <i class="ri-calendar-line"></i>
+                </div>
+                <span>May 2022 - December 2022</span>
+              </div>
+              <p class="text-gray-700 mb-4">
+                Contributed to the development of enterprise software solutions,
+                focusing on backend services and API integrations for various
+                client projects.
+              </p>
+              <div class="space-y-2">
+                <div class="flex items-start">
+                  <div
+                    class="w-5 h-5 flex items-center justify-center mt-0.5 mr-2 text-accent1"
+                  >
+                    <i class="ri-check-line"></i>
+                  </div>
+                  <p class="text-gray-700">
+                    Developed RESTful APIs for client applications using Node.js
+                    and Express
+                  </p>
+                </div>
+                <div class="flex items-start">
+                  <div
+                    class="w-5 h-5 flex items-center justify-center mt-0.5 mr-2 text-accent1"
+                  >
+                    <i class="ri-check-line"></i>
+                  </div>
+                  <p class="text-gray-700">
+                    Implemented database schemas and optimized queries for
+                    MongoDB and PostgreSQL
+                  </p>
+                </div>
+                <div class="flex items-start">
+                  <div
+                    class="w-5 h-5 flex items-center justify-center mt-0.5 mr-2 text-accent1"
+                  >
+                    <i class="ri-check-line"></i>
+                  </div>
+                  <p class="text-gray-700">
+                    Collaborated with cross-functional teams to deliver projects
+                    on schedule
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Timeline Item 3 -->
+          <div class="relative pl-8">
+            <div class="timeline-dot absolute left-0 top-0"></div>
+            <div class="bg-white rounded-lg shadow-md p-6 card">
+              <div class="flex justify-between items-center mb-4">
+                <h3 class="text-xl font-semibold text-gray-800">
+                  NGO Technology Volunteer
+                </h3>
+                <span
+                  class="bg-accent3/10 text-accent3 px-3 py-1 rounded-full text-xs font-medium"
+                  >Current</span
+                >
+              </div>
+              <div class="flex items-center mb-4 text-gray-600">
+                <div class="w-5 h-5 flex items-center justify-center mr-2">
+                  <i class="ri-building-line"></i>
+                </div>
+                <span>TechForGood Foundation</span>
+                <div class="w-5 h-5 flex items-center justify-center mx-2">
+                  <i class="ri-calendar-line"></i>
+                </div>
+                <span>January 2022 - Present</span>
+              </div>
+              <p class="text-gray-700 mb-4">
+                Leading technology initiatives and providing solutions for
+                non-profit organizations, with a focus on improving their
+                digital capabilities and operational efficiency.
+              </p>
+              <div class="space-y-2">
+                <div class="flex items-start">
+                  <div
+                    class="w-5 h-5 flex items-center justify-center mt-0.5 mr-2 text-accent1"
+                  >
+                    <i class="ri-check-line"></i>
+                  </div>
+                  <p class="text-gray-700">
+                    Successfully completed 10+ projects with 3+ satisfied
+                    long-term clients
+                  </p>
+                </div>
+                <div class="flex items-start">
+                  <div
+                    class="w-5 h-5 flex items-center justify-center mt-0.5 mr-2 text-accent1"
+                  >
+                    <i class="ri-check-line"></i>
+                  </div>
+                  <p class="text-gray-700">
+                    Expert in creating professional presentations using Canva
+                    for project documentation
+                  </p>
+                </div>
+                <div class="flex items-start">
+                  <div
+                    class="w-5 h-5 flex items-center justify-center mt-0.5 mr-2 text-accent1"
+                  >
+                    <i class="ri-check-line"></i>
+                  </div>
+                  <p class="text-gray-700">
+                    Developed and implemented digital solutions that improved
+                    efficiency by 40%
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="entrepreneurial" class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">
+          Entrepreneurial Journey
+        </h2>
+        <div
+          class="bg-gradient-to-r from-primary/10 to-secondary/10 rounded-lg p-8 mb-12"
+        >
+          <div class="flex flex-col md:flex-row items-center gap-8">
+            <div class="w-full md:w-1/2">
+              <h3 class="text-2xl font-semibold mb-4 text-gray-800">
+                TechSolutions Agency
+              </h3>
+              <p class="text-gray-700 mb-6">
+                Founded a technology solutions agency focused on helping
+                businesses leverage AI and automation to streamline their
+                operations and enhance customer experiences. Our team
+                specializes in developing custom solutions tailored to each
+                client's unique needs.
+              </p>
+              <div class="flex flex-wrap gap-4 mb-6">
+                <div
+                  class="flex items-center bg-white rounded-lg px-4 py-2 shadow-sm"
+                >
+                  <div
+                    class="w-8 h-8 flex items-center justify-center mr-2 text-primary"
+                  >
+                    <i class="ri-user-line"></i>
+                  </div>
+                  <div>
+                    <p class="font-semibold">3+</p>
+                    <p class="text-sm text-gray-600">Clients</p>
+                  </div>
+                </div>
+                <div
+                  class="flex items-center bg-white rounded-lg px-4 py-2 shadow-sm"
+                >
+                  <div
+                    class="w-8 h-8 flex items-center justify-center mr-2 text-accent1"
+                  >
+                    <i class="ri-check-double-line"></i>
+                  </div>
+                  <div>
+                    <p class="font-semibold">10+</p>
+                    <p class="text-sm text-gray-600">Projects</p>
+                  </div>
+                </div>
+                <div
+                  class="flex items-center bg-white rounded-lg px-4 py-2 shadow-sm"
+                >
+                  <div
+                    class="w-8 h-8 flex items-center justify-center mr-2 text-accent2"
+                  >
+                    <i class="ri-team-line"></i>
+                  </div>
+                  <div>
+                    <p class="font-semibold">5</p>
+                    <p class="text-sm text-gray-600">Team Members</p>
+                  </div>
+                </div>
+              </div>
+              <a
+                href="#contact"
+                class="bg-primary text-white px-6 py-3 rounded-button font-medium hover:bg-primary/90 transition inline-block whitespace-nowrap"
+                >Partner with Us</a
+              >
+            </div>
+            <div class="w-full md:w-1/2">
+              <div class="grid grid-cols-2 gap-4">
+                <div class="bg-white rounded-lg p-4 shadow-md card">
+                  <div
+                    class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full mb-4"
+                  >
+                    <i class="ri-robot-line text-primary text-xl"></i>
+                  </div>
+                  <h4 class="font-semibold mb-2">AI Solutions</h4>
+                  <p class="text-gray-600 text-sm">
+                    Custom AI agents and chatbots to enhance customer service
+                    and automate tasks.
+                  </p>
+                </div>
+                <div class="bg-white rounded-lg p-4 shadow-md card">
+                  <div
+                    class="w-12 h-12 flex items-center justify-center bg-secondary/10 rounded-full mb-4"
+                  >
+                    <i class="ri-settings-line text-secondary text-xl"></i>
+                  </div>
+                  <h4 class="font-semibold mb-2">Automation</h4>
+                  <p class="text-gray-600 text-sm">
+                    Workflow automation solutions to streamline business
+                    processes and reduce manual work.
+                  </p>
+                </div>
+                <div class="bg-white rounded-lg p-4 shadow-md card">
+                  <div
+                    class="w-12 h-12 flex items-center justify-center bg-accent1/10 rounded-full mb-4"
+                  >
+                    <i class="ri-code-box-line text-accent1 text-xl"></i>
+                  </div>
+                  <h4 class="font-semibold mb-2">Web Development</h4>
+                  <p class="text-gray-600 text-sm">
+                    Modern, responsive websites and web applications tailored to
+                    business needs.
+                  </p>
+                </div>
+                <div class="bg-white rounded-lg p-4 shadow-md card">
+                  <div
+                    class="w-12 h-12 flex items-center justify-center bg-accent2/10 rounded-full mb-4"
+                  >
+                    <i class="ri-line-chart-line text-accent2 text-xl"></i>
+                  </div>
+                  <h4 class="font-semibold mb-2">Data Analytics</h4>
+                  <p class="text-gray-600 text-sm">
+                    Data-driven insights and visualizations to inform business
+                    decisions.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="bg-white rounded-lg shadow-md p-6 card">
+            <div
+              class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full mb-4"
+            >
+              <i class="ri-award-line text-primary text-xl"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-2 text-gray-800">
+              Recognition
+            </h3>
+            <p class="text-gray-700">
+              Featured in local tech publications for innovative solutions and
+              recognized at regional startup events for contributions to the
+              tech ecosystem.
+            </p>
+          </div>
+          <div class="bg-white rounded-lg shadow-md p-6 card">
+            <div
+              class="w-12 h-12 flex items-center justify-center bg-secondary/10 rounded-full mb-4"
+            >
+              <i class="ri-customer-service-line text-secondary text-xl"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-2 text-gray-800">
+              Client Satisfaction
+            </h3>
+            <p class="text-gray-700">
+              Maintained a 95% client satisfaction rate with multiple long-term
+              partnerships and recurring projects from satisfied clients.
+            </p>
+          </div>
+          <div class="bg-white rounded-lg shadow-md p-6 card">
+            <div
+              class="w-12 h-12 flex items-center justify-center bg-accent1/10 rounded-full mb-4"
+            >
+              <i class="ri-lightbulb-line text-accent1 text-xl"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-2 text-gray-800">Innovation</h3>
+            <p class="text-gray-700">
+              Continuously exploring new technologies and methodologies to
+              deliver cutting-edge solutions that keep clients ahead of the
+              competition.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section
+      id="contact"
+      class="py-16 bg-gradient-to-br from-primary/10 to-secondary/10"
+    >
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-4 text-gray-800">
+          Get in Touch
+        </h2>
+        <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
+          Ready to innovate? Let's discuss how we can work together to bring
+          your ideas to life. Reach out using the form below or contact me
+          directly.
+        </p>
+        <div class="max-w-5xl mx-auto flex flex-col md:flex-row gap-8">
+          <div class="w-full md:w-1/2 bg-white rounded-lg shadow-md p-6">
+            <form id="contactForm">
+              <div class="mb-4">
+                <label for="name" class="block text-gray-700 font-medium mb-2"
+                  >Name</label
+                >
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  class="w-full px-4 py-2 border border-gray-300 rounded focus:border-primary"
+                  placeholder="Your Name"
+                  required
+                />
+              </div>
+              <div class="mb-4">
+                <label for="email" class="block text-gray-700 font-medium mb-2"
+                  >Email</label
+                >
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  class="w-full px-4 py-2 border border-gray-300 rounded focus:border-primary"
+                  placeholder="your@email.com"
+                  required
+                />
+              </div>
+              <div class="mb-4">
+                <label
+                  for="subject"
+                  class="block text-gray-700 font-medium mb-2"
+                  >Subject</label
+                >
+                <input
+                  type="text"
+                  id="subject"
+                  name="subject"
+                  class="w-full px-4 py-2 border border-gray-300 rounded focus:border-primary"
+                  placeholder="What's this about?"
+                />
+              </div>
+              <div class="mb-6">
+                <label
+                  for="message"
+                  class="block text-gray-700 font-medium mb-2"
+                  >Message</label
+                >
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="5"
+                  class="w-full px-4 py-2 border border-gray-300 rounded focus:border-primary"
+                  placeholder="Your message here..."
+                  required
+                ></textarea>
+              </div>
+              <button
+                type="submit"
+                class="w-full bg-primary text-white px-6 py-3 rounded-button font-medium hover:bg-primary/90 transition whitespace-nowrap"
+              >
+                Send Message
+              </button>
+            </form>
+          </div>
+          <div class="w-full md:w-1/2 bg-white rounded-lg shadow-md p-6">
+            <h3 class="text-xl font-semibold mb-6 text-gray-800">
+              Contact Information
+            </h3>
+            <div class="space-y-4 mb-8">
+              <div class="flex items-start">
+                <div
+                  class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full mr-4 mt-1"
+                >
+                  <i class="ri-mail-line text-primary"></i>
+                </div>
+                <div>
+                  <h4 class="font-medium text-gray-800">Email</h4>
+                  <a
+                    href="mailto:udayhiremath46@gmail.com"
+                    class="text-primary hover:underline"
+                    >udayhiremath46@gmail.com</a
+                  >
+                </div>
+              </div>
+              <div class="flex items-start">
+                <div
+                  class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full mr-4 mt-1"
+                >
+                  <i class="ri-phone-line text-primary"></i>
+                </div>
+                <div>
+                  <h4 class="font-medium text-gray-800">Phone</h4>
+                  <p class="text-gray-700">+91 9380372686</p>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <div
+                  class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full mr-4 mt-1"
+                >
+                  <i class="ri-map-pin-line text-primary"></i>
+                </div>
+                <div>
+                  <h4 class="font-medium text-gray-800">Location</h4>
+                  <p class="text-gray-700">Hubli, Karnataka, India</p>
+                </div>
+              </div>
+            </div>
+            <h3 class="text-xl font-semibold mb-4 text-gray-800">
+              Connect With Me
+            </h3>
+            <div class="flex space-x-4">
+              <a
+                href="#"
+                class="w-10 h-10 flex items-center justify-center bg-gray-100 hover:bg-primary/10 rounded-full transition"
+              >
+                <i class="ri-linkedin-fill text-primary"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 flex items-center justify-center bg-gray-100 hover:bg-primary/10 rounded-full transition"
+              >
+                <i class="ri-github-fill text-primary"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 flex items-center justify-center bg-gray-100 hover:bg-primary/10 rounded-full transition"
+              >
+                <i class="ri-twitter-fill text-primary"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 flex items-center justify-center bg-gray-100 hover:bg-primary/10 rounded-full transition"
+              >
+                <i class="ri-instagram-fill text-primary"></i>
+              </a>
+            </div>
+            <div class="mt-8 p-4 bg-primary/5 rounded-lg">
+              <p class="text-gray-700 italic">
+                "I'm always open to discussing new projects, creative ideas, or
+                opportunities to be part of your vision."
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="bg-gray-800 text-white py-12">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+          <div class="mb-6 md:mb-0">
+            <h2 class="text-2xl font-bold mb-2">Uday Hiremath</h2>
+            <p class="text-gray-400">AI Developer & Problem Solver</p>
+          </div>
+          <div class="flex flex-col items-center md:items-end">
+            <p class="text-gray-400 mb-2">© 2025 All Rights Reserved</p>
+            <p class="text-gray-400">Last Updated: June 27, 2025</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+    window.addEventListener('load', () => {
+      document.getElementById('loader').style.display = 'none';
+    });
+
+    function sendToWhatsApp() {
+      var name = document.getElementById('name').value.trim();
+      var email = document.getElementById('email').value.trim();
+      var desc = document.getElementById('desc').value.trim();
+      var message = `Hello, my name is ${name}.\\nEmail: ${email}\\nMessage: ${desc}`;
+      var url = `https://wa.me/919380372686?text=${encodeURIComponent(message)}`;
+      window.open(url, '_blank');
+    }
+  </script>
+  </body>
+</html>
